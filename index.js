@@ -10,16 +10,18 @@ const clear_history_btn = document.querySelector(".clear_history_btn");
 const history = document.querySelector(".history");
 
 let result = "";
+let resultHistory = "";
 
 function displayNumbers() {
     if (this.textContent === "." && currentNumber.innerHTML.includes("."))
         return;
     if (this.textContent === "." && currentNumber.innerHTML === "")
         return (currentNumber.innerHTML = "0.");
-    if (currentNumber.innerHTML != "-") {
-        currentNumber.innerHTML = "";
+    if (currentNumber.innerHTML == result) {
+        currentNumber.innerHTML = ""
     }
     currentNumber.innerHTML += this.textContent;
+    resultHistory += currentNumber.textContent
 }
 function operate() {
     if (currentNumber.innerHTML === "" && this.textContent === "-") {
@@ -34,6 +36,7 @@ function operate() {
     previousNumber.innerHTML = currentNumber.innerHTML;
     mathSign.innerHTML = this.textContent;
     currentNumber.innerHTML = "";
+    resultHistory += this.textContent;
 }
 function showResult() {
     if (previousNumber.innerHTML === "" || currentNumber.innerHTML === "")
@@ -68,8 +71,12 @@ function showResult() {
 }
 
 function addToHistory() {
+    // const newHistoryItem = document.createElement("li");
+    // newHistoryItem.innerHTML = `${currentNumber.innerHTML} ${mathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`;
+    // newHistoryItem.classList.add("historyItem");
+    // history.appendChild(newHistoryItem);
     const newHistoryItem = document.createElement("li");
-    newHistoryItem.innerHTML = `${currentNumber.innerHTML} ${mathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`;
+    newHistoryItem.innerHTML = `${resultHistory} = ${result}`;
     newHistoryItem.classList.add("historyItem");
     history.appendChild(newHistoryItem);
 }
