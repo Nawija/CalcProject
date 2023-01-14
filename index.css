@@ -37,7 +37,7 @@ body {
     justify-content: center;
     margin: 2px;
 }
-#mathSign{
+#mathSign {
     font-size: 1.4rem;
     line-height: 40px;
 }
@@ -62,7 +62,8 @@ body {
     font-size: 1.4rem;
     cursor: pointer;
 }
-.squares button:hover {
+.squares button:hover,
+.squares button:active {
     background-color: rgba(0, 0, 0, 0.66);
 }
 button span {
@@ -143,21 +144,21 @@ button span {
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: hsla(0, 0%, 95%, 0.166); 
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 95%, 0.166);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: rgb(40, 40, 40);
     max-height: 5px;
     border-radius: 7px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0); 
-  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+}
