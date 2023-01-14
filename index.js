@@ -16,6 +16,9 @@ function displayNumbers() {
         return;
     if (this.textContent === "." && currentNumber.innerHTML === "")
         return (currentNumber.innerHTML = "0.");
+    if (currentNumber.innerHTML != "-") {
+        currentNumber.innerHTML = "";
+    }
     currentNumber.innerHTML += this.textContent;
 }
 function operate() {
@@ -67,13 +70,14 @@ function showResult() {
 function addToHistory() {
     const newHistoryItem = document.createElement("li");
     newHistoryItem.innerHTML = `${currentNumber.innerHTML} ${mathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`;
-    newHistoryItem.classList.add('historyItem')
-    history.appendChild(newHistoryItem)
+    newHistoryItem.classList.add("historyItem");
+    history.appendChild(newHistoryItem);
 }
 function clearHistory() {
     history.textContent = "";
-    if (history.textContent === "") {
-        clear_history_btn.remove("active");
+    clear_history_btn.classList.remove("active");
+    if (history.innerHTML == "") {
+        lear_history_btn.add("active");
     }
 }
 function clearScreen() {
