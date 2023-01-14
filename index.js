@@ -75,9 +75,8 @@ function addToHistory() {
 }
 function clearHistory() {
     history.textContent = "";
-    clear_history_btn.classList.remove("active");
     if (history.innerHTML == "") {
-        lear_history_btn.add("active");
+        clear_history_btn.classList.remove("active");
     }
 }
 function clearScreen() {
