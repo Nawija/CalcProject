@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="side-left">
+        <div class="display">
+            <p id="previousNumber"></p>
+            <p id="mathSign"></p>
+            <p id="currentNumber"></p>
+        </div>
+        <div class="keyboard">
+            <div class="squares first">
+                <button class="clear">C</button>
+                <button class="keys">7</button>
+                <button class="keys">4</button>
+                <button class="keys">1</button>
+                <button class="keys">0</button>
+            </div>
+            <div class="squares second">
+                <button class="operation">2^</button>
+                <button class="keys">8</button>
+                <button class="keys">5</button>
+                <button class="keys">2</button>
+                <button class="keys">00</button>
+            </div>
+            <div class="squares third">
+                <button class="operation">:</button>
+                <button class="keys">9</button>
+                <button class="keys">6</button>
+                <button class="keys">3</button>
+                <button class="keys">.</button>
+            </div>
+            <div class="squares fourth">
+                <button class="operation">x</button>
+                <button class="operation">-</button>
+                <button class="operation">+</button>
+                <button class="equal">=</button>
+            </div>
+        </div>
+    </div>
+    <div class="side-right">
+        <p>Last Calculations</p>
+        <button class="clear_history_btn">Clear History</button>
+        <div class="underline"></div>
+        <ul class="history">
+            
+        </ul>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
