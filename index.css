@@ -10,6 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.1) 0%,
@@ -128,13 +129,35 @@ button span {
 
 @media (max-width: 600px) {
     body {
-        margin: 12vh 0;
+        margin: 8vh 0;
+        height: auto;
         flex-direction: column;
     }
     .side-right {
         margin: 0 auto;
-        margin-top: 12vh;
+        margin-top: 8vh;
         height: auto;
         width: 40.67vh;
     }
 }
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 95%, 0.166); 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(40, 40, 40);
+    max-height: 5px;
+    border-radius: 7px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0); 
+  }
