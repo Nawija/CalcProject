@@ -10,7 +10,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.1) 0%,
@@ -37,7 +36,7 @@ body {
     justify-content: center;
     margin: 2px;
 }
-#mathSign {
+#mathSign{
     font-size: 1.4rem;
     line-height: 40px;
 }
@@ -129,12 +128,13 @@ button span {
 
 @media (max-width: 600px) {
     body {
-        margin: 19vh 0;
+        margin: 12vh 0;
         flex-direction: column;
     }
     .side-right {
         margin: 0 auto;
-        margin-top: 25vh;
+        margin-top: 12vh;
+        height: auto;
         width: 40.67vh;
     }
 }
